@@ -7,7 +7,7 @@ public class Customers {
         this.bank = bank;
     }
 
-    String printingTotalNoOfCustomers(){
-        return ("Total number of Customers: "+bank.getSavingAccountHolders()+bank.getFixedDepositHolders());
+    String printingTotalNoOfCustomers() {
+        return ("Total number of Customers: " + bank.getSavingAccountHolders() + bank.getFixedDepositHolders());
     }
 }
