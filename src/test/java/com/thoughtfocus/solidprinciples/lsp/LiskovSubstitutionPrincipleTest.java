@@ -7,17 +7,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class LiskovSubstitutionPrincipleTest {
     @Test
     void testLiskovSubstitution() {
-        Vehicle vehicle = new Vehicle();
-        assertEquals("starting a vehicle", vehicle.start());
-        assertEquals("stopping a vehicle", vehicle.stop());
+        FlyingBird swan = new Swan();
+        assertEquals("I am Swan ,I can fly.", swan.fly());
+        assertEquals("I am Swan ,I can eat.", swan.eat());
 
-        Car car = new Car(new Vehicle());
-        assertEquals("starting a car.", car.start());
-        assertEquals("stopping a car.", car.stop());
+        NonFlyingBird penguin = new Penguin();
+        assertEquals("I am Penguin ,I cannot Fly.", penguin.cannotFly());
+        assertEquals("I am Penguin ,I can eat.", penguin.eat());
 
-        Bike bike = new Bike(new Vehicle());
-        assertEquals("starting a bike.", bike.start());
-        assertEquals("stopping a bike.", bike.stop());
 
     }
 
